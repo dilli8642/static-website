@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Admin Login</title>
+<style>
+   
+
+    body {
+        background: linear-gradient(135deg, #fafcfd, #485563);
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #fff;
+    }
+    .login-container {
+        background: rgba(6, 37, 85, 0.468);
+        padding: 50px 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        width: 360px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .login-container h1 {
+        text-align: center;
+        margin-bottom: 35px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: #e0e0e0;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+    }
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+        color: #ddd;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 8px #6dd5ed;
+        color: #000;
+    }
+    button {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(90deg, #2193b0, #6dd5ed);
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        cursor: pointer;
+        letter-spacing: 1.2px;
+        transition: background 0.4s ease, transform 0.2s ease;
+        box-shadow: 0 4px 15px rgba(33, 147, 176, 0.6);
+    }
+    button:hover {
+        background: linear-gradient(90deg, #6dd5ed, #2193b0);
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(109, 213, 237, 0.8);
+    }
+    /* Optional: small footer note */
+    .footer-note {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 13px;
+        color: #bbb;
+    }
+</style>
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Admin Login</h1>
+    <form action="lab 1 sub 8.html" method="post">
+        <label for="admin-id">Admin ID:</label>
+        <input type="text" id="admin-id" name="adminid" placeholder="Enter your admin ID" required>
+
+        <label for="admin-password">Password:</label>
+        <input type="password" id="admin-password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit"><a href="file:///C:/Users/dilli/OneDrive/Desktop/projects/lab%201%20sub%209.html" style="text-decoration: transparent;">Login</a></button>
+    </form>
+    <div class="footer-note">Authorized personnel only</div>
+</div>
+
+</body>
+</html>

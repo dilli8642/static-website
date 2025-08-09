@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Test - 3 Steps</title>
+<style>
+    body {
+        background: #f5f7fa;
+        font-family: 'Segoe UI', sans-serif;
+        padding: 20px;
+    }
+    .test-box {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        max-width: 800px;
+        margin: auto;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #2193b0;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+    }
+    input[type="text"], select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .question {
+        margin-top: 15px;
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        background: #f9fcff;
+    }
+    .question p {
+        font-weight: bold;
+    }
+    button, .next-btn {
+        margin-top: 20px;
+        padding: 12px 25px;
+        background: linear-gradient(90deg, #2193b0, #6dd5ed);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+    }
+    button:hover, .next-btn:hover {
+        transform: scale(1.05);
+        background: linear-gradient(90deg, #6dd5ed, #2193b0);
+    }
+
+    /* Step handling */
+    .step { display: none; }
+    #step1:checked ~ .step1,
+    #step2:checked ~ .step2,
+    #step3:checked ~ .step3 {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<div class="test-box">
+    <h2>Online Test</h2>
+
+    <!-- Hidden radio buttons for steps -->
+    <input type="radio" name="steps" id="step1" checked hidden>
+    <input type="radio" name="steps" id="step2" hidden>
+    <input type="radio" name="steps" id="step3" hidden>
+
+    <!-- Step 1 -->
+    <div class="step step1">
+        <label>Course Code:</label>
+        <input type="text" value="ABC101" readonly>
+
+        <label>Course Name:</label>
+        <input type="text" value="Fundamentals of Python" readonly>
+
+        <label>Duration:</label>
+        <input type="text" value="60 minutes" readonly>
+
+        <h3>Instructions:</h3>
+        <ul>
+            <li>Read all questions carefully before answering.</li>
+            <li>No negative marking for wrong answers.</li>
+        </ul>
+
+        <label for="step2" class="next-btn">Next ➡</label>
+    </div>
+
+    <div class="step step2">
+        <label>Roll Number:</label>
+        <input type="text" placeholder="Enter your roll number" required>
+
+        <label>Year:</label>
+        <select required>
+            <option value="">Select Year</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+        </select>
+
+        <label>Semester:</label>
+        <select required>
+            <option value="">Select Semester</option>
+            <option>1st Semester</option>
+            <option>2nd Semester</option>
+        </select>
+
+        <label>Regulation:</label>
+        <select required>
+            <option value="">Select Regulation</option>
+            <option>R20</option>
+            <option>R22</option>
+            <option>R23</option>
+        </select>
+
+        <label for="step3" class="next-btn">Next ➡</label>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step step3">
+        <h3>MCQ Questions</h3>
+        <div class="question">
+    <p>1. Which of the following is the correct file extension for Python files?</p>
+    <label><input type="radio" name="q1"> .py</label>
+    <label><input type="radio" name="q1"> .python</label>
+    <label><input type="radio" name="q1"> .pt</label>
+    <label><input type="radio" name="q1"> .pyt</label>
+</div>
+
+<div class="question">
+    <p>2. How do you insert comments in Python code?</p>
+    <label><input type="radio" name="q2"> // This is a comment</label>
+    <label><input type="radio" name="q2"> /This is a comment/</label>
+    <label><input type="radio" name="q2"> # This is a comment</label>
+    <label><input type="radio" name="q2"> ** This is a comment</label>
+</div>
+
+<div class="question">
+    <p>3. Which keyword is used to define a function in Python?</p>
+    <label><input type="radio" name="q3"> func</label>
+    <label><input type="radio" name="q3"> define</label>
+    <label><input type="radio" name="q3"> def</label>
+    <label><input type="radio" name="q3"> function</label>
+</div>
+
+<div class="question">
+    <p>4. What is the output of print(2 ** 3) in Python?</p>
+    <label><input type="radio" name="q4"> 6</label>
+    <label><input type="radio" name="q4"> 8</label>
+    <label><input type="radio" name="q4"> 9</label>
+    <label><input type="radio" name="q4"> 5</label>
+</div>
+
+<div class="question">
+    <p>5. Which data type is used to store True or False values?</p>
+    <label><input type="radio" name="q5"> int</label>
+    <label><input type="radio" name="q5"> bool</label>
+    <label><input type="radio" name="q5"> str</label>
+    <label><input type="radio" name="q5"> float</label>
+</div>
+
+<div class="question">
+    <p>6. How do you create a list in Python?</p>
+    <label><input type="radio" name="q6"> list = {1, 2, 3}</label>
+    <label><input type="radio" name="q6"> list = [1, 2, 3]</label>
+    <label><input type="radio" name="q6"> list = (1, 2, 3)</label>
+    <label><input type="radio" name="q6"> list = &lt;1, 2, 3&gt;</label>
+</div>
+
+<div class="question">
+    <p>7. Which of the following loops is not available in Python?</p>
+    <label><input type="radio" name="q7"> for</label>
+    <label><input type="radio" name="q7"> while</label>
+    <label><input type="radio" name="q7"> do-while</label>
+    <label><input type="radio" name="q7"> None of the above</label>
+</div>
+
+<div class="question">
+    <p>8. What will be the output of: print(type(10 / 2))?</p>
+    <label><input type="radio" name="q8"> &lt;class 'int'&gt;</label>
+    <label><input type="radio" name="q8"> &lt;class 'float'&gt;</label>
+    <label><input type="radio" name="q8"> &lt;class 'str'&gt;</label>
+    <label><input type="radio" name="q8"> &lt;class 'bool'&gt;</label>
+</div>
+
+<div class="question">
+    <p>9. How do you handle exceptions in Python?</p>
+    <label><input type="radio" name="q9"> try-except</label>
+    <label><input type="radio" name="q9"> do-catch</label>
+    <label><input type="radio" name="q9"> try-catch</label>
+    <label><input type="radio" name="q9"> handle-error</label>
+</div>
+
+<div class="question">
+    <p>10. Which method adds an element to the end of a list?</p>
+    <label><input type="radio" name="q10"> add()</label>
+    <label><input type="radio" name="q10"> append()</label>
+    <label><input type="radio" name="q10"> insert()</label>
+    <label><input type="radio" name="q10"> extend()</label>
+</div>
+
+        <button type="submit">Submit Test</button>
+    </div>
+</div>
+
+</body>
+</html>
